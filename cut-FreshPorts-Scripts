@@ -1,0 +1,3 @@
+rm *.pm crontab.sample *.xml ports-supfile restart_pg config.pm.sample status.pm.sample
+chmod -x status.pm.sample
+rm -rf testing update procmail regression patches updates Verify

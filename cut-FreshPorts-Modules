@@ -1,0 +1,3 @@
+rm *.pl *.sh config.pm.sample config.sh.sample crontab.sample status.pm.sample *.xml ports-supfile restart_pg
+chmod -x xml_munge.pm status.pm.sample process_svn_mail.pm process_cvs_mail.pm commit_log_ports_ignore.pm
+rm -rf maildrop testing update procmail regression patches updates Jail Verify
