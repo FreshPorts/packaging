@@ -3,8 +3,8 @@
 VERSION=$1
 MSG=$2
 
-#svn copy svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshsource/www/trunk \
-#         svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshsource/www/tags/${VERSION} -m "'${MSG}'"
+svn copy svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshsource/www/trunk \
+         svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshsource/www/tags/${VERSION} -m "'${MSG}'"
 
 cd ~/tmp
 svn export svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshsource/www/tags/${VERSION} freshsource-${VERSION}
