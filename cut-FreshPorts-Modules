@@ -3,19 +3,17 @@
 VERSION=$1
 MSG=$2
 
-svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/trunk \
-         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/tags/${VERSION} -m "'${MSG}'"
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/trunk \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/tags/${VERSION} -m "'${MSG}'"
 
 cd ~/tmp
 rm -rf FreshPorts-Modules-${VERSION}
 
-svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/tags/${VERSION} FreshPorts-Modules-${VERSION}
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/tags/${VERSION} FreshPorts-Modules-${VERSION}
 
 cd FreshPorts-Modules-${VERSION}
 
-rm *.pl *.sh config.sh.sample crontab.sample *.xml ports-supfile restart_pg
 chmod -x xml_munge.pm status.pm.sample process_svn_mail.pm process_cvs_mail.pm commit_log_ports_ignore.pm
-rm -rf maildrop testing update procmail regression patches updates Jail Verify
 
 cd -
 
