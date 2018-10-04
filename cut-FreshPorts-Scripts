@@ -3,20 +3,13 @@
 VERSION=$1
 MSG=$2
 
-svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/trunk \
-         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/tags/${VERSION} -m "'${MSG}'"
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/trunk \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/tags/${VERSION} -m "'${MSG}'"
 
 cd ~/tmp
 rm -rf FreshPorts-Scripts-${VERSION}
 
-svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/scripts/tags/${VERSION} FreshPorts-Scripts-${VERSION}
-
-cd FreshPorts-Scripts-${VERSION}
-
-rm *.pm crontab.sample *.xml ports-supfile restart_pg config.pm.sample status.pm.sample
-rm -rf testing update procmail regression patches updates Verify
-
-cd -
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/tags/${VERSION} FreshPorts-Scripts-${VERSION}
 
 tar -czf FreshPorts-Scripts-${VERSION}.tar.gz FreshPorts-Scripts-${VERSION}
 scp FreshPorts-Scripts-${VERSION}.tar.gz r710-01:
