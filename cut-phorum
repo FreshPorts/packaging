@@ -1,0 +1,13 @@
+#!/bin/sh
+
+VERSION=$1
+MSG=$2
+
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/3rdPartyProducts/phorum/trunk \
+         svn+ssh://svnusers@svn.int.unixathome.org/3rdPartyProducts/phorum/tags/${VERSION} -m "'${MSG}'"
+
+cd ~/tmp
+svn export svn+ssh://svnusers@svn.int.unixathome.org/3rdPartyProducts/phorum/tags/${VERSION} phorum-${VERSION}
+
+tar -czf phorum-${VERSION}.tar.gz phorum-${VERSION}
+scp phorum-${VERSION}.tar.gz r710-01:
