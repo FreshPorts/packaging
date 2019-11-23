@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://svnusers@svn.int.unixathome.org/3rdPartyProducts/phorum/tags/${VERSION} phorum-${VERSION}
 
 tar -czf phorum-${VERSION}.tar.gz phorum-${VERSION}
-scp phorum-${VERSION}.tar.gz r710-01:
+scp phorum-${VERSION}.tar.gz pkg01:

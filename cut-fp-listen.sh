@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://dan@svn.int.unixathome.org/usr/local/svn/repos/freshports-1/daemontools/tags/fp-listen-${VERSION} freshports-fp-listen-${VERSION}
 
 tar -czf freshports-fp-listen-${VERSION}.tar.gz freshports-fp-listen-${VERSION}
-scp freshports-fp-listen-${VERSION}.tar.gz r710-01:
+scp freshports-fp-listen-${VERSION}.tar.gz pkg01:

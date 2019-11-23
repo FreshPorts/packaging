@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/periodics/tags/${VERSION} freshports-periodics-${VERSION}
 
 tar -czf freshports-periodics-${VERSION}.tar.gz freshports-periodics-${VERSION}
-scp freshports-periodics-${VERSION}.tar.gz r710-01:
+scp freshports-periodics-${VERSION}.tar.gz pkg01:
