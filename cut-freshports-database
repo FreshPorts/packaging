@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/database-schema/tags/freshports-database-${VERSION} freshports-database-${VERSION}
 
 tar -czf freshports-database-${VERSION}.tar.gz freshports-database-${VERSION}
-scp freshports-database-${VERSION}.tar.gz pkg01:
+scp freshports-database-${VERSION}.tar.gz pkg01.int.unixathome.org:

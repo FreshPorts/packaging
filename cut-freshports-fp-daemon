@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/tags/fp-daemon-${VERSION} freshports-fp-daemon-${VERSION}
 
 tar -czf freshports-fp-daemon-${VERSION}.tar.gz freshports-fp-daemon-${VERSION}
-scp freshports-fp-daemon-${VERSION}.tar.gz pkg01:
+scp freshports-fp-daemon-${VERSION}.tar.gz pkg01.int.unixathome.org:

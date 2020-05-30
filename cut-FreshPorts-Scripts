@@ -12,4 +12,4 @@ rm -rf FreshPorts-Scripts-${VERSION}
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/tags/${VERSION} FreshPorts-Scripts-${VERSION}
 
 tar -czf FreshPorts-Scripts-${VERSION}.tar.gz FreshPorts-Scripts-${VERSION}
-scp FreshPorts-Scripts-${VERSION}.tar.gz pkg01:
+scp FreshPorts-Scripts-${VERSION}.tar.gz pkg01.int.unixathome.org:

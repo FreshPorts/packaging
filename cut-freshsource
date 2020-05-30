@@ -10,4 +10,4 @@ cd ~/tmp
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/tags//${VERSION} freshsource-${VERSION}
 
 tar -czf freshsource-${VERSION}.tar.gz freshsource-${VERSION}
-scp freshsource-${VERSION}.tar.gz pkg01:
+scp freshsource-${VERSION}.tar.gz pkg01.int.unixathome.org:
