@@ -1,0 +1,14 @@
+#!/bin/sh
+
+VERSION=$1
+MSG=$2
+
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/branches/git/fp-ingress \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/tags/fp-ingress-${VERSION} -m "'${MSG}'"
+
+cd ~/tmp
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/tags/fp-ingress-${VERSION} freshports-fp-ingress-${VERSION}
+
+tar -czf freshports-fp-ingress-${VERSION}.tar.gz freshports-fp-ingress-${VERSION}
+scp freshports-fp-ingress-${VERSION}.tar.gz pkg01:
+rm -rf freshports-fp-ingress-${VERSION}
