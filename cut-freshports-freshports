@@ -1,0 +1,14 @@
+#!/bin/sh
+
+VERSION=$1
+MSG=$2
+
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/branches/git/freshports \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/tags/freshports-${VERSION} -m "'${MSG}'"
+
+cd ~/tmp
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/daemontools/tags/freshports-${VERSION} freshports-freshports-${VERSION}
+
+tar -czf freshports-freshports-${VERSION}.tar.gz freshports-freshports-${VERSION}
+scp freshports-freshports-${VERSION}.tar.gz pkg01:
+rm -rf freshports-freshports-${VERSION}
