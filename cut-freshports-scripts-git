@@ -1,0 +1,15 @@
+#!/bin/sh
+
+VERSION=$1
+MSG=$2
+
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/branches/git \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/tags/${VERSION} -m "'${MSG}'"
+
+cd ~/tmp
+rm -rf freshports-scripts-git-${VERSION}
+
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/scripts/tags/${VERSION} freshports-scripts-git-${VERSION}
+
+tar -czf freshports-scripts-git-${VERSION}.tar.gz freshports-scripts-git-${VERSION}
+scp freshports-scripts-git-${VERSION}.tar.gz pkg01.int.unixathome.org:
