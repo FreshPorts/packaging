@@ -1,0 +1,14 @@
+{
+  "name": "freshsource-www-git",
+  "origin": "dvl/freshsource-www-git",
+  "version": "9999.0.1",
+  "comment": "For use by Dan Langille only",
+  "maintainer": "dan@langille.org",
+  "www": "http://www.FreshPorts.org/",
+  "abi": "FreeBSD:12:amd64",
+  "arch": "freebsd:12:x86:64",
+  "prefix": "/usr/local",
+  "flatsize": 368322,
+  "licenselogic": "single",
+  "desc": "This manifest was created to prevent the real package from being installed in a development environment.",
+}
