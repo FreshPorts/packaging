@@ -1,0 +1,16 @@
+#!/bin/sh
+
+VERSION=$1
+MSG=$2
+
+svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/Verify/trunk \
+         svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/Verify/tags/${VERSION} -m "'${MSG}'"
+         
+
+cd ~/tmp
+rm -rf freshports-verify-${VERSION}
+
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/Verify/tags/${VERSION} freshports-verify-${VERSION}
+
+tar -czf freshports-verify-${VERSION}.tar.gz freshports-verify-${VERSION}
+scp freshports-verify-${VERSION}.tar.gz pkg01.int.unixathome.org:
