@@ -6,7 +6,7 @@ MSG=$2
 svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/trunk \
          svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/tags/${VERSION} -m "'${MSG}'"
 
-cd ~/tmp
+cd ~/tmp/packaging/
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/tags//${VERSION} freshsource-${VERSION}
 
 tar -czf freshsource-${VERSION}.tar.gz freshsource-${VERSION}
