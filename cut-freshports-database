@@ -6,7 +6,7 @@ MSG=$2
 svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/database-schema/trunk \
          svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/database-schema/tags/freshports-database-${VERSION} -m "'${MSG}'"
 
-cd ~/tmp
+cd ~/tmp/packaging/
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/database-schema/tags/freshports-database-${VERSION} freshports-database-${VERSION}
 
 tar -czf freshports-database-${VERSION}.tar.gz freshports-database-${VERSION}

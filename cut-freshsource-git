@@ -8,7 +8,7 @@ echo svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/branches
 svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/branches/git \
          svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/tags/freshsource-${VERSION} -m "'${MSG}'"
          
-cd ~/tmp
+cd ~/tmp/packaging/
 svn export svn+ssh://svnusers@svn.int.unixathome.org/freshsource/www/tags/freshsource-${VERSION} freshsource-${VERSION}
 
 tar -czf freshsource-${VERSION}.tar.gz freshsource-${VERSION}
