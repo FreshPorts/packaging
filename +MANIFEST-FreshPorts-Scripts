@@ -1,6 +1,6 @@
 {
-  "name": "FreshPorts-Scripts",
-  "origin": "dvl/FreshPorts-Scripts",
+  "name": "p5-freshports-scripts-git",
+  "origin": "dvl/p5-freshports-scripts-git",
   "version": "9999.0.1",
   "comment": "For use by Dan Langille only",
   "maintainer": "dan@langille.org",
