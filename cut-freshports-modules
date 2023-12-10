@@ -7,15 +7,15 @@ svn copy svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/
          svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/tags/${VERSION} -m "'${MSG}'"
 
 cd ~/tmp/packaging/
-rm -rf freshports-modules-git-${VERSION}
+rm -rf freshports-modules-${VERSION}
 
-svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/tags/${VERSION} freshports-modules-git-${VERSION}
+svn export svn+ssh://svnusers@svn.int.unixathome.org/freshports-1/ingress/modules/tags/${VERSION} freshports-modules-${VERSION}
 
-cd freshports-modules-git-${VERSION}
+cd freshports-modules-${VERSION}
 
 chmod -x xml_munge.pm status.pm.sample process_svn_mail.pm process_cvs_mail.pm commit_log_ports_ignore.pm
 
 cd -
 
-tar -czf freshports-modules-git-${VERSION}.tar.gz freshports-modules-git-${VERSION}
-scp freshports-modules-git-${VERSION}.tar.gz pkg01.int.unixathome.org:
+tar -czf freshports-modules-${VERSION}.tar.gz freshports-modules-${VERSION}
+scp freshports-modules-${VERSION}.tar.gz pkg01.int.unixathome.org:
