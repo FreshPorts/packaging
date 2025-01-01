@@ -1,4 +1,4 @@
-# Why is this repo called pacakaging?
+# Why is this repo called packaging?
 
 At one time, this repo held scripts for tagging releases and rolling tarballs using the
 subversion repo. After converting to git, those scripts are no longer used. The scripts
