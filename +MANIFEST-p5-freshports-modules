@@ -1,6 +1,6 @@
 {
-  "name": "p5-FreshPorts-Modules",
-  "origin": "freshports/p5-FreshPorts-Modules",
+  "name": "p5-freshports-modules",
+  "origin": "freshports/p5-freshports-modules",
   "version": "9999.0.2",
   "comment": "For use by FreshPorts coders",
   "maintainer": "dan@langille.org",
