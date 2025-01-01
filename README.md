@@ -2,7 +2,8 @@
 
 When developing the ingress and website sides of FreshPorts, some FreshPorts packages can be installed
 instead of operating entirely from source. To avoid having packages installed over top of the working
-copy of your code, fake packages are installed which contain the same origin, but no installed code.
+copy of your code, manifests are used which contain the same origin as that package, but do not
+install any files.
 
 I've written about such files here:
 
