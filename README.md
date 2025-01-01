@@ -1,6 +1,6 @@
 # How to avoid installing packages over your code
 
-When developing the ingress and website side of FreshPorts, some FreshPorts packages can be installed
+When developing the ingress and website sides of FreshPorts, some FreshPorts packages can be installed
 instead of operating entirely from source. To avoid having packages installed over top of the working
 copy of your code, fake packages are installed which contain the same origin, but no installed code.
 
