@@ -1,3 +1,9 @@
+# Why is this repo called pacakaging?
+
+At one time, this repo held scripts for tagging releases and rolling tarballs using the
+subversion repo. After converting to git, those scripts are no longer used. The scripts
+have been deleted, but the name persists.
+
 # How to avoid installing packages over your code
 
 When developing the ingress and website sides of FreshPorts, some FreshPorts packages can be installed
