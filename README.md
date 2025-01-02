@@ -15,7 +15,7 @@ I've written about such files here:
 
    https://dan.langille.org/2021/02/16/preventing-a-given-package-from-being-installed/
 
-To install a manfest file:
+The files for an ingress node are:
 
 ```
 sudo pkg register -M ./+MANIFEST-p5-freshports-modules
@@ -23,4 +23,16 @@ sudo pkg lock -y p5-freshports-modules
 
 sudo pkg register -M ./+MANIFEST-p5-freshports-scripts
 sudo pkg lock -y p5-freshports-scripts
+```
+
+For a webserver node:
+
+```
+% sudo pkg register -M ./+MANIFEST-freshsource-www 
+Installing freshsource-www-9999.0.2...
+% sudo pkg register -M ./+MANIFEST-freshports-www 
+Installing freshports-www-9999.0.2...
+% sudo pkg lock -y freshports-www freshsource-www 
+Locking freshports-www-9999.0.2
+Locking freshsource-www-9999.0.2
 ```
